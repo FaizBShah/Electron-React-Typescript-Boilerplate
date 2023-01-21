@@ -2,22 +2,19 @@
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
-    "standard-with-typescript",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "plugin:jsx-a11y/recommended",
     "prettier"
   ],
-  "plugins": ["react", "jsx-a11y", "import"],
+  "plugins": ["react", "@typescript-eslint", "jsx-a11y", "import"],
   "rules": {
     "react/prop-types": "off",
     "react/react-in-jsx-scope": "off",
     "@typescript-eslint/no-non-null-assertion": "off",
     "@typescript-eslint/explicit-function-return-type": "warn",
-    "@typescript-eslint/no-unused-vars": "warn",
-    "@typescript-eslint/no-floating-promises": "off",
-    "@typescript-eslint/strict-boolean-expressions": "off",
-    "@typescript-eslint/no-empty-interface": "off",
-    "@typescript-eslint/promise-function-async": "off",
-    "@typescript-eslint/no-misused-promises": "off"
+    "@typescript-eslint/no-floating-promises": "off"
   },
   "parserOptions": {
     "ecmaVersion": "latest",
