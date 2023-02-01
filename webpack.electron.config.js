@@ -9,11 +9,11 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].js',
-    clean: true,
+    clean: isDev,
     assetModuleFilename: '[name][ext]'
   },
   resolve: {
-    extensions: ['.tsx', '.jsx', '.ts', '.js']
+    extensions: ['.tsx', '.jsx', '.ts', '.js', '.json']
   },
   devtool: isDev ? 'source-map' : undefined,
   module: {

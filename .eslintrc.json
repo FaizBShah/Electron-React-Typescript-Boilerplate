@@ -2,26 +2,52 @@
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
-    "plugin:jsx-a11y/recommended",
-    "prettier"
+    "plugin:prettier/recommended"
   ],
-  "plugins": ["react", "@typescript-eslint", "jsx-a11y", "import"],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "react", "react-hooks", "prettier"],
   "rules": {
-    "react/prop-types": "off",
+    "prettier/prettier": [
+      "warn",
+      {
+        "endOfLine": "auto"
+      },
+      {
+        "usePrettierrc": true
+      }
+    ],
+    "react/prop-types": "warn",
     "react/react-in-jsx-scope": "off",
     "@typescript-eslint/no-non-null-assertion": "off",
     "@typescript-eslint/explicit-function-return-type": "warn",
-    "@typescript-eslint/no-empty-function": "off",
+    "@typescript-eslint/no-empty-function": "warn",
     "@typescript-eslint/no-var-requires": "off",
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/no-unsafe-call": "off",
     "@typescript-eslint/no-unsafe-member-access": "off",
     "@typescript-eslint/no-unsafe-assignment": "off",
     "@typescript-eslint/no-unsafe-return": "off",
-    "@typescript-eslint/no-floating-promises": "off"
+    "@typescript-eslint/no-floating-promises": "off",
+    "no-mixed-spaces-and-tabs": "off",
+    "no-console": "warn",
+    "quotes": ["warn", "single"],
+    "max-len": ["warn", 180],
+    "@typescript-eslint/ban-types": "warn",
+    "no-prototype-builtins": "warn",
+    "@typescript-eslint/ban-ts-comment": "warn",
+    "no-fallthrough": "warn",
+    "no-empty-pattern": "warn",
+    "react/display-name": "warn",
+    "react/jsx-key": "warn",
+    "no-case-declarations": "warn",
+    "no-unsafe-optional-chaining": "warn",
+    "react/no-children-prop": "warn",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
   },
   "parserOptions": {
     "ecmaVersion": "latest",

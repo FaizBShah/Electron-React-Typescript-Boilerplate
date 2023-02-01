@@ -11,11 +11,7 @@ const createWindow: () => void = () => {
     height: 600
   })
 
-  mainWindow.loadURL(
-    isDev
-      ? 'http://localhost:3000'
-      : `file://${path.resolve(__dirname, 'dist', 'renderer', 'index.html')}`
-  )
+  mainWindow.loadURL(isDev ? 'http://localhost:3000' : `file://${path.resolve(__dirname, 'renderer', 'index.html')}`)
 
   if (isDev) {
     mainWindow.webContents.openDevTools()

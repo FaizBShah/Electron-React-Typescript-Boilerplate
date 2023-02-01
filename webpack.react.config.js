@@ -14,7 +14,7 @@ module.exports = {
     assetModuleFilename: '[name][ext]'
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.jsx', '.js']
+    extensions: ['.tsx', '.ts', '.jsx', '.js', '.json']
   },
   devtool: isDev ? 'source-map' : undefined,
   devServer: {
