@@ -60,8 +60,8 @@ module.exports = {
       template: path.resolve(__dirname, 'src', 'app', 'public', 'index.html')
     }),
     new MiniCssExtractPlugin({
-      filename: isDev ? '[name].css' : '[name].[hash].css',
-      chunkFilename: isDev ? '[id].css' : '[id].[hash].css'
+      filename: isDev ? '[name].css' : '[name].[contenthash].css',
+      chunkFilename: isDev ? '[id].css' : '[id].[contenthash].css'
     })
   ]
 }
